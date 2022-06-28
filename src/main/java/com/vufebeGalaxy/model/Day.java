@@ -4,6 +4,8 @@ import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,33 +26,5 @@ public class Day {
     @NotNull
     @Column (name ="DS_CLIMA", length = 20)
     private String dsClima;
-
-	public Integer getDia() {
-		return dia;
-	}
-
-	public void setDia(Integer dia) {
-		this.dia = dia;
-	}
-
-	public String getDsClima() {
-		return dsClima;
-	}
-
-	public void setDsClima(String dsClima) {
-		this.dsClima = dsClima;
-	}
-
-	public Day() {
-		this.dia = 0;
-		this.dsClima = "";
-	}
-
-	public Day(Integer dia, String dsClima) {
-		this.dia = dia;
-		this.dsClima = dsClima;
-	}
-    
-    
 
 }

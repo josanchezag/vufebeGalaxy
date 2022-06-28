@@ -8,17 +8,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.Id;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import com.sun.istack.NotNull;
 
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "TUSERS")
-@Data
 public class UserApp {
 	
 	@Id
@@ -40,30 +40,12 @@ public class UserApp {
 
     @NotNull
     @Column (name ="SNACTIVO", length = 1)
-    private Integer snActivo;
+    private String snActivo;
 
     @NotNull
     @Column (name ="SINGUPDATE")
     private  Date singUpDate;
-	
-    
-    public UserApp(int id, String username, String dsnombre, String pass, int snActivo, java.util.Date singUpDate) {
-		this.id=id;
-		this.username=username;
-		this.dsnombre=dsnombre;
-		this.pass=pass;
-		this.snActivo=snActivo;
-		this.singUpDate=(Date) singUpDate;
-	}
-    
-    public UserApp() {
-    	this.id=0;
-		this.username="";
-		this.dsnombre="";
-		this.pass="";
-		this.snActivo=0;
-		this.singUpDate=(Date) singUpDate;
-    }
+
 	public String getDsNombre() {return this.dsnombre;}
     public String getPass() {return this.pass;}
 

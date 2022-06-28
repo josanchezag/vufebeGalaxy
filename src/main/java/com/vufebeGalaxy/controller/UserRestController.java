@@ -1,7 +1,8 @@
 package com.vufebeGalaxy.controller;
 
-import java.util.Date;
 import java.util.List;
+import java.util.Date;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -36,7 +37,7 @@ public class UserRestController {
 						"josanchez",
 						"Josimar Sanchez",
 						"$2a$12$e7gIjsWoBFOMSECRYCd52OBA0OlgX3wPE4VxBc1hj/pLtcvvpmpDC",
-						1,
+						"S",
 						new Date()));
 	}
 	
