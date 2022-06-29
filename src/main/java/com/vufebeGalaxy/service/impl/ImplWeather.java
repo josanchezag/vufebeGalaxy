@@ -8,12 +8,15 @@ import com.vufebeGalaxy.model.Day;
 import com.vufebeGalaxy.model.Point;
 import com.vufebeGalaxy.model.conts.Constants;
 import com.vufebeGalaxy.service.interfaces.IWeather;
-import com.vufebeGalaxy.util.Calculate;
 import com.vufebeGalaxy.util.StraightLine;
 import com.vufebeGalaxy.util.Triangle;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
+@AllArgsConstructor
 public class ImplWeather implements IWeather {
-	private StraightLine line=new StraightLine();
+	private StraightLine line;
 
 	@Override
 	public Day calculateWeatherAtDay(Integer nDay,List<Point> positions) throws Exception {
@@ -74,7 +77,7 @@ public class ImplWeather implements IWeather {
 
 	public String validateRainingDay(List<Point> positions) throws Exception {
 		Triangle triangle=new Triangle(positions.get(0),positions.get(1),positions.get(2));
-		var ban= triangle.pointIntoTriangle(positions.get(3));
+		var ban= triangle.pointIntoTriangle(Constants.SUN_POINT);
 		return ban?Constants.RAINING:"";
 
 	}

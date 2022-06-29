@@ -35,7 +35,12 @@ public class StraightLine {
 	}
 	
 	public void calculateSlop (Point p1, Point p2){
-        this.m= (p1.getY() - p2.getY()) / (p1.getX() - p2.getX());
+		try {
+			this.m = (p1.getY() - p2.getY()) / (p1.getX() - p2.getX());
+		}
+		catch(Exception e){
+			throw  e;
+		}
     }
 	
 	public void calculateB (Point p){

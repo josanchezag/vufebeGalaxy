@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CalculatePosition {
 
-    public static List<Point> calculatePositionPlanetDay(Integer nDay) throws Exception {
+    public static List<Point> calculatePositionPlanetDay(Integer nDay){
         List<Point> points=new ArrayList<Point>(3);
         for(EnumPlanet planet:EnumPlanet.values()) {
             var angle = Calculate.caculateAnglePlanetPositionByDay(nDay, planet.getAngularVelocity());

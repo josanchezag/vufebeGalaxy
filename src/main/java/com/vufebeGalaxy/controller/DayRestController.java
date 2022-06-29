@@ -5,6 +5,7 @@ import com.vufebeGalaxy.model.conts.Constants;
 import com.vufebeGalaxy.model.enums.EnumPlanet;
 import com.vufebeGalaxy.service.CalculatePosition;
 import com.vufebeGalaxy.service.impl.ImplWeather;
+import com.vufebeGalaxy.util.StraightLine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -90,7 +91,7 @@ public class DayRestController {
 			for (int i=0;i<dias;i++) {
 				positions=new ArrayList<Point>();
 				positions=CalculatePosition.calculatePositionPlanetDay(i+1);
-				ImplWeather weather=new ImplWeather();
+				ImplWeather weather=new ImplWeather(new StraightLine());
 				days
 						.add(weather.calculateWeatherAtDay((i+1),positions));
 
