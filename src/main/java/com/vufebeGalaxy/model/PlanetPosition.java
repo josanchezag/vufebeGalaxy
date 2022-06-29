@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class PlanetPosition {
 	private EnumPlanet planet;
-	private Position position;
+	private Point position;
 	
 	public void calculatePositionByDay(Integer day){
 		

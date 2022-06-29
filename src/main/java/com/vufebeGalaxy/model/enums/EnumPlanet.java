@@ -10,8 +10,12 @@ public enum EnumPlanet {
 	private double sunDistance;
 	private String mesureSunDistance;
 
-	EnumPlanet(double w, String string, double d, String string2) {
-		// TODO Auto-generated constructor stub
+	EnumPlanet(double w, String orient, double sunDistance, String mesureSunDistance) {
+		this.angularVelocity=w;
+		this.orientation=orient;
+		this.sunDistance=sunDistance;
+		this.mesureSunDistance=mesureSunDistance;
+
 	}
 
 	public double getAngularVelocity() {

@@ -1,9 +1,9 @@
 package com.vufebeGalaxy.util;
 
-import com.vufebeGalaxy.model.Position;
+import com.vufebeGalaxy.model.Point;
 
 public class Validate {
-	public static boolean validateInsideTriangle(Position s, Position a, Position b, Position c) {
+	public static boolean validateInsideTriangle(Point s, Point a, Point b, Point c) {
 		double as_x = s.getX()-a.getX(); 
 		double as_y = s.getY()-a.getY(); 
 		boolean s_ab = (b.getX()-a.getX())*as_y-(b.getY()-a.getY())*as_x > 0?true:false; 

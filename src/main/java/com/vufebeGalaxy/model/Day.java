@@ -27,4 +27,8 @@ public class Day {
     @Column (name ="DS_CLIMA", length = 20)
     private String dsClima;
 
+
+    @Column (name ="PERIMETER")
+    private double perimeter;
+
 }

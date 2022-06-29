@@ -3,10 +3,11 @@ package com.vufebeGalaxy.service.interfaces;
 import java.util.List;
 
 
-import com.vufebeGalaxy.model.Position;
+import com.vufebeGalaxy.model.Day;
+import com.vufebeGalaxy.model.Point;
 
 @FunctionalInterface
 public interface IWeather {
-	public String calculateWeatherAtDay(List<Position> positions) throws Exception;
+	public Day calculateWeatherAtDay(Integer nDay, List<Point> positions) throws Exception;
 
 }

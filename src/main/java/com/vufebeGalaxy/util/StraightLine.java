@@ -2,7 +2,7 @@ package com.vufebeGalaxy.util;
 
 import java.util.Objects;
 
-import com.vufebeGalaxy.model.Position;
+import com.vufebeGalaxy.model.Point;
 
 
 public class StraightLine {
@@ -29,20 +29,20 @@ public class StraightLine {
 		this.m = 0;
 	}
 	
-	public void calculateStraightLineEquation(Position p1,Position p2) {
+	public void calculateStraightLineEquation(Point p1, Point p2) {
 		calculateSlop(p1,p2);
 		calculateB(p1);
 	}
 	
-	public void calculateSlop (Position p1,Position p2){
+	public void calculateSlop (Point p1, Point p2){
         this.m= (p1.getY() - p2.getY()) / (p1.getX() - p2.getX());
     }
 	
-	public void calculateB (Position p){
+	public void calculateB (Point p){
         this.b= p.getY()-(this.m*p.getX());
     }
 	
-	public boolean validatePointinLine(Position p) {
+	public boolean validatePointinLine(Point p) {
 		return Objects.equals(p.getY(), ((this.m*p.getX())+this.b))?true:false;
 	}
 	
